@@ -29,7 +29,9 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     polkit-gnome python-requests starship \
     swappy grim slurp pamixer brightnessctl gvfs \
     bluez bluez-utils lxappearance xfce4-settings \
-    dracula-gtk-theme dracula-icons-git xdg-desktop-portal-hyprland
+    dracula-gtk-theme dracula-icons-git xdg-desktop-portal-hyprland\
+    wlroots xdg-utils wayland libegl vulkan-icd-loader mesa polkit-gnome\
+    greetd greetd-tuigreet vulkan-nouveau
 
     # Start the bluetooth service
     echo -e "Starting the Bluetooth Service...\n"
