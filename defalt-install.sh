@@ -32,18 +32,11 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
   yay -S --noconfirm grim slurp # screenshot utils
 
-  yay -S --noconfirm swaybg swaylock-effects wlogout starship # additional utils
+  yay -S --noconfirm swaybg swaylock-effects wlogout starship waybar # additional utils
 
   yay -S --noconfirm wofi kitty dolphin nm-connection-editor blueman # necessary apps
 
   yay -S --noconfirm vlc telegram-desktop # additional apps
-
-  read -n1 -rep "Would you like to install waybar with cava? (y,n)" waybar
-  if [[ $WAY == "Y" || $WAY == "y" ]]; then
-    yay -S --noconfirm libcava waybar-cava # waybar with cava
-  else
-    yay -S --noconfirm waybar # waybar without cava
-  fi
 
   yay -S --noconfirm libegl vulkan-icd-loader mesa greetd greetd-tuigreet vulkan-nouveau # gpu drivers i guess?
 
