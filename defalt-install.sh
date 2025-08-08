@@ -23,7 +23,6 @@ fi
 ### Install all of the above pacakges ####
 read -n1 -rep 'Would you like to install the packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
-  # swaybg or hyprpaper?
   # xfce4-settings?
   yay -S --noconfirm hyprland mako python-requests \
     xdg-desktop-portal-hyprland wlroots xdg-utils wayland # hyprland
@@ -32,7 +31,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
   yay -S --noconfirm grim slurp # screenshot utils
 
-  yay -S --noconfirm swaybg swaylock-effects wlogout starship waybar # additional utils
+  yay -S --noconfirm hyprpaper swaylock-effects wlogout starship waybar # additional utils
 
   yay -S --noconfirm wofi kitty dolphin nm-connection-editor blueman # necessary apps
 
