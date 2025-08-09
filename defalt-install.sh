@@ -35,7 +35,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
   yay -S --noconfirm wofi kitty dolphin nm-connection-editor blueman # necessary apps
 
-  yay -S --noconfirm vlc telegram-desktop # additional apps
+  yay -S --noconfirm vlc telegram-desktop kclock # additional apps
 
   yay -S --noconfirm libegl vulkan-icd-loader mesa greetd greetd-tuigreet vulkan-nouveau # gpu drivers i guess?
 
