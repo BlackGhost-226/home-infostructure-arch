@@ -27,7 +27,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   yay -S --noconfirm hyprland mako python-requests \
     xdg-desktop-portal-hyprland wlroots xdg-utils wayland # hyprland
 
-  yay -S --noconfirm themes polkit-gnome pamixer brightnessctl gvfs bluez bluez-utils # necessary utils
+  yay -S --noconfirm themes polkit-gnome pamixer brightnessctl gvfs bluez bluez-utils firewalld # necessary utils
 
   yay -S --noconfirm grim slurp # screenshot utils
 
@@ -42,8 +42,9 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   yay -S --noconfirm ttf-jetbrains-mono-nerd noto-fonts-emoji # fonts
 
   # Start the bluetooth service
-  echo -e "Starting the Bluetooth Service...\n"
+  echo -e "Starting Services...\n"
   sudo systemctl enable --now bluetooth.service
+  sudo systemctl enable --now firewalld.service
   sleep 2
 
   # Clean out other portals
