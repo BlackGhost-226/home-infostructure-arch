@@ -44,7 +44,10 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   # Start the bluetooth service
   echo -e "Starting Services...\n"
   sudo systemctl enable --now bluetooth.service
+
   sudo systemctl enable --now firewalld.service
+  sudo firewall-cmd --zone=public --remove-service=ssh
+
   sleep 2
 
   # Clean out other portals
