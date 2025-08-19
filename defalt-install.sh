@@ -27,17 +27,17 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   yay -S --noconfirm hyprland mako python-requests \
     xdg-desktop-portal-hyprland wlroots xdg-utils wayland # hyprland
 
-  yay -S --noconfirm themes polkit-gnome pamixer brightnessctl gvfs bluez bluez-utils firewalld # necessary utils
+  yay -S --noconfirm themes polkit-gnome pamixer brightnessctl gvfs bluez bluez-utils firewalld python3 # necessary utils
 
   yay -S --noconfirm grim slurp # screenshot utils
 
-  yay -S --noconfirm hyprpaper swaylock-effects wlogout starship waybar # additional utils
+  yay -S --noconfirm hyprpaper swaylock-effects wlogout starship waybar pyenv # additional utils
 
   yay -S --noconfirm wofi kitty dolphin nm-connection-editor blueman # necessary apps
 
-  yay -S --noconfirm vlc telegram-desktop kclock # additional apps
+  yay -S --noconfirm vlc telegram-desktop kclock alsamixer vlc-plugins-all vscodium-bin # additional apps
 
-  yay -S --noconfirm libegl vulkan-icd-loader mesa greetd greetd-tuigreet vulkan-nouveau # gpu drivers i guess?
+  yay -S --noconfirm libegl vulkan-icd-loader mesa greetd greetd-tuigreet vulkan-nouveau nvidia-utils nvidia nvidia-settings # gpu drivers i guess?
 
   yay -S --noconfirm ttf-jetbrains-mono-nerd noto-fonts-emoji # fonts
 

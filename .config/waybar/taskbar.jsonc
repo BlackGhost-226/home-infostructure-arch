@@ -1,0 +1,24 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "mode": "hide",
+    "exclusive": true,
+    "height": 20,
+
+    "modules-center": ["wlr/taskbar"],
+    "modules-right": ["tray"],
+
+	"wlr/taskbar": {
+	  "format": "{icon}",
+	  "icon-size": 30,
+	  "icon-theme": "Numix-Circle",
+	  "tooltip-format": "{title}",
+	  "on-click": "activate",
+	  "on-click-middle": "close"
+	},
+
+	"tray": {
+	  "icon-size": 30,
+	  "spacing": 5
+	}
+}

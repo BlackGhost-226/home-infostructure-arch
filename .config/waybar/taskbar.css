@@ -1,0 +1,32 @@
+window#waybar {
+    background: rgba(21, 18, 27, 0);
+    color: #cdd6f4;
+}
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", woff2-font-awesome;
+    font-weight: bold;
+    font-size: 13px;
+    min-height: 0;
+}
+
+#taskbar {
+    background: #1e1e2e;
+    opacity: 1;
+    padding: 0px 10px;
+    margin: 3px 0px;
+    margin-bottom: 5px;
+    border: 1px solid #181825;
+
+    border-radius: 10px 10px 10px 10px;
+}
+
+#taskbar button {
+    background: #1e1e2e;
+}
+
+#taskbar.empty {
+    background: rgba(21, 18, 27, 0);
+}
