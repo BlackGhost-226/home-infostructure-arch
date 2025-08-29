@@ -31,11 +31,11 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
   yay -S --noconfirm grim slurp # screenshot utils
 
-  yay -S --noconfirm hyprpaper swaylock-effects wlogout starship waybar pyenv # additional utils
+  yay -S --noconfirm hyprpaper swaylock-effects wlogout starship waybar pyenv neofetch cava # additional utils
 
   yay -S --noconfirm wofi kitty dolphin nm-connection-editor blueman # necessary apps
 
-  yay -S --noconfirm vlc telegram-desktop kclock alsamixer vlc-plugins-all vscodium-bin # additional apps
+  yay -S --noconfirm vlc telegram-desktop kclock alsamixer vlc-plugins-all vscodium-bin firefox # additional apps
 
   yay -S --noconfirm libegl vulkan-icd-loader mesa greetd greetd-tuigreet vulkan-nouveau nvidia-utils nvidia nvidia-settings # gpu drivers i guess?
 
