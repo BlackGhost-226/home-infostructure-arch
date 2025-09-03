@@ -1,5 +1,8 @@
+# GLOBAL CONFIGURATION OPTIONS
 max-history=5
 sort=-time
+
+# STYLE OPTIONS
 layer=overlay
 background-color=#2e3440
 width=300
@@ -12,6 +15,13 @@ max-icon-size=64
 default-timeout=5000
 ignore-timeout=1
 font=monospace 14
+
+# BINDING OPTIONS
+on-button-left=dismiss
+on-button-middle=none
+on-button-right=dismiss-all
+on-touch=dismiss
+on-notify=exec mpv ~/.config/mako/sound.wav
 
 [urgency=low]
 border-color=#cccccc
