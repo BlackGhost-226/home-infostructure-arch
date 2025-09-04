@@ -27,24 +27,29 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   yay -S --noconfirm hyprland mako python-requests \
     xdg-desktop-portal-hyprland wlroots xdg-utils wayland # hyprland
 
-  yay -S --noconfirm themes polkit-gnome pamixer brightnessctl gvfs bluez bluez-utils firewalld python3 # necessary utils
+  yay -S --noconfirm brightnessctl gvfs bluez bluez-utils firewalld python3 # necessary utils | themes polkit-gnome
 
   yay -S --noconfirm grim slurp # screenshot utils
 
-  yay -S --noconfirm hyprpaper swaylock-effects wlogout starship waybar pyenv neofetch cava mpv # additional utils
+  yay -S --noconfirm hyprpaper swaylock-effects wlogout starship waybar pyenv neofetch cava mpv wine # additional utils
 
   yay -S --noconfirm wofi kitty dolphin nm-connection-editor blueman # necessary apps
 
-  yay -S --noconfirm vlc telegram-desktop kclock alsamixer vlc-plugins-all vscodium-bin firefox # additional apps
+  yay -S --noconfirm vlc telegram-desktop kclock vlc-plugins-all vscodium-bin firefox # additional apps
 
-  yay -S --noconfirm libegl vulkan-icd-loader mesa greetd greetd-tuigreet vulkan-nouveau nvidia-utils nvidia nvidia-settings # gpu drivers i guess?
+  yay -S --noconfirm mesa # gpu drivers | greetd greetd-tuigreet vulkan-nouveau libegl vulkan-icd-loader
+  read -n1 -rep 'Would you like to install nvidia drivers? (y,n)' GPU
+  if [[ $GPU == "Y" || $GPU == "y" ]]; then
+    yay -S --noconfirm nvidia-dkms
+  fi
 
   yay -S --noconfirm ttf-jetbrains-mono-nerd noto-fonts-emoji # fonts
 
-  # Start the bluetooth service
   echo -e "Starting Services...\n"
+  # Start the bluetooth service
   sudo systemctl enable --now bluetooth.service
 
+  # Start the firewall service
   sudo systemctl enable --now firewalld.service
   sudo firewall-cmd --zone=public --remove-service=ssh
 
