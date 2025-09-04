@@ -21,7 +21,7 @@ on-button-left=dismiss
 on-button-middle=none
 on-button-right=dismiss-all
 on-touch=dismiss
-on-notify=exec mpv ~/.config/mako/sound.wav
+on-notify=exec mpv ~/.config/mako/sound.wav --volume=150
 
 [urgency=low]
 border-color=#cccccc
