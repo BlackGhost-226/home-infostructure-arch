@@ -12,3 +12,5 @@ PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"
 
 neofetch --ascii_distro arch_small
+
+alias r='ranger'
