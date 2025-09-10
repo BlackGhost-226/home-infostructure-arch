@@ -40,7 +40,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   yay -S --noconfirm mesa # gpu drivers | greetd greetd-tuigreet vulkan-nouveau libegl vulkan-icd-loader
   read -n1 -rep 'Would you like to install nvidia drivers? (y,n)' GPU
   if [[ $GPU == "Y" || $GPU == "y" ]]; then
-    yay -S --noconfirm nvidia-dkms
+    yay -S --noconfirm nvidia # nvidia-dkms
   fi
 
   yay -S --noconfirm ttf-jetbrains-mono-nerd noto-fonts-emoji # fonts
