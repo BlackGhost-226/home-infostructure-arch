@@ -57,6 +57,8 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   sudo systemctl enable --now firewalld.service
   sudo firewall-cmd --zone=public --remove-service=ssh
 
+  sudo systemctl disable sshd.service
+
   sleep 2
 
   # Clean out other portals
