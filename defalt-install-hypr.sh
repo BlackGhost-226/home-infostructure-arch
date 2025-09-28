@@ -35,7 +35,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
   yay -S --noconfirm wofi kitty dolphin ranger nm-connection-editor blueman # necessary apps
 
-  yay -S --noconfirm vlc telegram-desktop kclock vlc-plugins-all vscodium-bin firefox # additional apps
+  yay -S --noconfirm vlc telegram-desktop kclock vlc-plugins-all visual-studio-code-bin firefox # additional apps
 
   yay -S --noconfirm exfatprogs dosfstools
 
