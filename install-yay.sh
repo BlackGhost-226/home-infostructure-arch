@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 sudo yes | git clone https://aur.archlinux.org/yay-git.git /opt
 
 USER="$(id -run)"

@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 #### Check for yay ####
 ISYAY=/sbin/yay
 if [ -f "$ISYAY" ]; then
