@@ -43,7 +43,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
   yay -S --noconfirm syncthing # buckup server
 
-  yay -S --noconfirm mesa # gpu drivers | greetd greetd-tuigreet vulkan-nouveau libegl vulkan-icd-loader
+  yay -S --noconfirm mesa vulkan-radeon vulkan-intel # gpu drivers
   read -n1 -rep 'Would you like to install nvidia drivers? (y,n)' GPU
   if [[ $GPU == "Y" || $GPU == "y" ]]; then
     yay -S --noconfirm nvidia # nvidia-dkms
