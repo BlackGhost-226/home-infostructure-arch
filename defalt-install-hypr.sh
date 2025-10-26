@@ -33,7 +33,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
   yay -S --noconfirm grim slurp # screenshot utils
 
-  yay -S --noconfirm hyprpaper swaylock-effects wlogout starship waybar pyenv neofetch cava mpv wine # additional utils
+  yay -S --noconfirm hyprpaper swaylock-effects wlogout starship waybar pyenv neofetch cava mpv wine copyq # additional utils
 
   yay -S --noconfirm wofi kitty dolphin ranger nm-connection-editor blueman # necessary apps
 
