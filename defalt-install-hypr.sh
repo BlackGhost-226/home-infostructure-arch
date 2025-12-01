@@ -39,7 +39,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
   yay -S --noconfirm vlc telegram-desktop kclock vlc-plugins-all visual-studio-code-bin firefox # additional apps
 
-  yay -S --noconfirm exfatprogs dosfstools
+  yay -S --noconfirm exfatprogs dosfstools ntfs-3g
 
   yay -S --noconfirm syncthing # buckup server
 
