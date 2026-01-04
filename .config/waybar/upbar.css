@@ -57,7 +57,8 @@ window#waybar {
 #workspaces,
 #custom-power-off,
 #language,
-#custom-cava {
+#custom-cava,
+#custom-update {
     background: #1e1e2e;
     opacity: 0.8;
     padding: 0px 10px;
@@ -126,4 +127,10 @@ window#waybar {
 #language {
   border-radius: 10px 10px 10px 10px;
   margin-left: 10px;
+}
+
+#custom-update {
+    border-radius: 10px 10px 10px 10px;
+    margin-right: 10px;
+    color: darkcyan;
 }

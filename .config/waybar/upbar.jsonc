@@ -11,7 +11,7 @@
 
     "modules-center": ["hyprland/window"],
 
-    "modules-right": ["network", "bluetooth",
+    "modules-right": ["custom/update", "network", "bluetooth",
       "battery", "pulseaudio", "custom/cava", "custom/power-off"],
 
     "hyprland/window": {
@@ -32,8 +32,8 @@
     "nm-connection-editor": "\uF1EB",
     "blueman-manager": "\uF294",
     "vlc": "",
-    "steam": ""
-  }
+    "steam": "" 
+    }
   },
 
     "clock": {
@@ -82,7 +82,7 @@
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
         "on-click": "nm-connection-editor",
-	"on-click-right": "exec kitty ~/.config/waybar/scripts/reloadNet.sh",
+	      "on-click-right": "exec kitty ~/.config/waybar/scripts/reloadNet.sh",
         "interval": 3
     },
 
@@ -111,5 +111,11 @@
 	"custom/cava": {
 		"format": "{}",
 		"exec": "~/.config/waybar/scripts/cava.sh"
-	}
+	},
+
+  "custom/update": {
+    "format": "{}",
+    "exec": "uname -r",
+    "on-click": "kitty sudo pacman -Syu"
+  }
 }
