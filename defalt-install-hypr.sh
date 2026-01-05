@@ -29,17 +29,17 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   yay -S --noconfirm hyprland mako python-requests \
     xdg-desktop-portal-hyprland wlroots xdg-utils wayland xorg-xwayland # hyprland | hyprpolkitagent
 
-  yay -S --noconfirm brightnessctl gvfs bluez bluez-utils firewalld python3 polkit polkit-qt5 # necessary utils | themes polkit-gnome
+  yay -S --noconfirm brightnessctl gvfs bluez bluez-utils firewalld python polkit polkit-qt5 # necessary utils | themes polkit-gnome
 
   yay -S --noconfirm grim slurp # screenshot utils
 
-  yay -S --noconfirm hyprpaper swaylock-effects wlogout starship waybar pyenv neofetch cava mpv wine copyq # additional utils
+  yay -S --noconfirm hyprpaper swaylock-effects wlogout starship waybar pyenv neofetch cava mpv wine # additional utils
 
   yay -S --noconfirm wofi kitty dolphin ranger nm-connection-editor blueman # necessary apps
 
-  yay -S --noconfirm vlc telegram-desktop kclock vlc-plugins-all visual-studio-code-bin firefox # additional apps
+  yay -S --noconfirm vlc telegram-desktop kclock vlc-plugins-all visual-studio-code-bin firefox copyq pyenv # additional apps
 
-  yay -S --noconfirm exfatprogs dosfstools ntfs-3g
+  yay -S --noconfirm exfatprogs dosfstools ntfs-3g # disk formats support
 
   yay -S --noconfirm syncthing # buckup server
 
