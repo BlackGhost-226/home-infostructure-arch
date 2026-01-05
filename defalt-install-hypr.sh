@@ -27,7 +27,7 @@ read -n1 -rep 'Would you like to install the packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
   # xfce4-settings?
   yay -S --noconfirm hyprland mako python-requests \
-    xdg-desktop-portal-hyprland wlroots xdg-utils wayland xorg-xwayland # hyprland | hyprpolkitagent
+    xdg-desktop-portal-hyprland wlroots xdg-utils wayland xorg-xwayland hyprpolkitagent # hyprland
 
   yay -S --noconfirm brightnessctl gvfs bluez bluez-utils firewalld python polkit polkit-qt5 # necessary utils | themes polkit-gnome
 
