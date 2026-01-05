@@ -27,7 +27,7 @@ read -n1 -rep 'Would you like to install the packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
   # xfce4-settings?
   yay -S --noconfirm hyprland mako python-requests \
-    xdg-desktop-portal-hyprland wlroots xdg-utils wayland xorg-xwayland hyprpolkitagent # hyprland
+    xdg-desktop-portal-hyprland wlroots xdg-utils wayland xorg-xwayland hyprpolkitagent sddm # hyprland
 
   yay -S --noconfirm brightnessctl gvfs bluez bluez-utils firewalld python polkit polkit-qt5 # necessary utils | themes polkit-gnome
 
@@ -60,6 +60,17 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   sudo firewall-cmd --zone=public --remove-service=ssh
 
   sudo systemctl disable sshd.service
+
+  sudo systemctl enable sddm.service
+
+  echo "" > /usr/share/wayland-sessions/hyprland.desktop
+  
+  echo "[Desktop Entry]" > /usr/share/wayland-sessions/hyprland.desktop
+  echo "Name=Hyprland" > /usr/share/wayland-sessions/hyprland.desktop
+  echo "Comment=Hyprland Wayland Compositor" > /usr/share/wayland-sessions/hyprland.desktop
+  echo "Exec=Hyprland" > /usr/share/wayland-sessions/hyprland.desktop
+  echo "Type=Application" > /usr/share/wayland-sessions/hyprland.desktop
+  echo "DesktopNames=Hyprland" > /usr/share/wayland-sessions/hyprland.desktop
 
   sleep 2
 
