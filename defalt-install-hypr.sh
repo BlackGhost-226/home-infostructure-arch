@@ -68,7 +68,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   echo "[Desktop Entry]" > /usr/share/wayland-sessions/hyprland.desktop
   echo "Name=Hyprland" > /usr/share/wayland-sessions/hyprland.desktop
   echo "Comment=Hyprland Wayland Compositor" > /usr/share/wayland-sessions/hyprland.desktop
-  echo "Exec=Hyprland" > /usr/share/wayland-sessions/hyprland.desktop
+  echo "Exec=start-hyprland" > /usr/share/wayland-sessions/hyprland.desktop
   echo "Type=Application" > /usr/share/wayland-sessions/hyprland.desktop
   echo "DesktopNames=Hyprland" > /usr/share/wayland-sessions/hyprland.desktop
 
