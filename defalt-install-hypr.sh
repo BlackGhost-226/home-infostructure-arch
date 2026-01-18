@@ -29,7 +29,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   yay -S --noconfirm hyprland mako python-requests \
     xdg-desktop-portal-hyprland wlroots xdg-utils wayland xorg-xwayland hyprpolkitagent sddm # hyprland
 
-  yay -S --noconfirm brightnessctl gvfs bluez bluez-utils firewalld python polkit polkit-qt5 # necessary utils | themes polkit-gnome
+  yay -S --noconfirm brightnessctl gvfs bluez bluez-utils firewalld python polkit polkit-qt5 chrony # necessary utils | themes polkit-gnome
 
   yay -S --noconfirm grim slurp # screenshot utils
 
@@ -59,9 +59,11 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   sudo systemctl enable --now firewalld.service
   sudo firewall-cmd --zone=public --remove-service=ssh
 
-  sudo systemctl disable sshd.service
+  sudo systemctl disable --now sshd.service
 
   sudo systemctl enable sddm.service
+
+  sudo systemctl enable --now chronyd
 
   echo "" > /usr/share/wayland-sessions/hyprland.desktop
   
