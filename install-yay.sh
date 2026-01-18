@@ -9,4 +9,4 @@
 
 #sudo yay -Suy --noconfirm
 
-sudo pacman -S --needed git base-devel && cd /opt && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
