@@ -1,10 +1,12 @@
 #!/usr/bin/bash
 
-sudo yes | git clone https://aur.archlinux.org/yay-git.git /opt
+#sudo yes | git clone https://aur.archlinux.org/yay-git.git /opt
 
-USER="$(id -run)"
-sudo chown -R $USER:$USER /opt/yay-git
+#USER="$(id -run)"
+#sudo chown -R $USER:$USER /opt/yay-git
 
-yes | makepkg -D /opt/yay-git -si
+#yes | makepkg -D /opt/yay-git -si
 
-sudo yay -Suy --noconfirm
+#sudo yay -Suy --noconfirm
+
+sudo pacman -S --needed git base-devel && cd /opt && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
