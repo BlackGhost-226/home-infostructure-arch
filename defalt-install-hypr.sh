@@ -66,12 +66,12 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   sudo systemctl enable sddm.service # enable SDDM
   echo "" > /usr/share/wayland-sessions/hyprland.desktop
   
-  echo "[Desktop Entry]" > /usr/share/wayland-sessions/hyprland.desktop
-  echo "Name=Hyprland" > /usr/share/wayland-sessions/hyprland.desktop
-  echo "Comment=Hyprland Wayland Compositor" > /usr/share/wayland-sessions/hyprland.desktop
-  echo "Exec=start-hyprland" > /usr/share/wayland-sessions/hyprland.desktop
-  echo "Type=Application" > /usr/share/wayland-sessions/hyprland.desktop
-  echo "DesktopNames=Hyprland" > /usr/share/wayland-sessions/hyprland.desktop
+  echo "[Desktop Entry]" >> /usr/share/wayland-sessions/hyprland.desktop
+  echo "Name=Hyprland" >> /usr/share/wayland-sessions/hyprland.desktop
+  echo "Comment=Hyprland Wayland Compositor" >> /usr/share/wayland-sessions/hyprland.desktop
+  echo "Exec=start-hyprland" >> /usr/share/wayland-sessions/hyprland.desktop
+  echo "Type=Application" >> /usr/share/wayland-sessions/hyprland.desktop
+  echo "DesktopNames=Hyprland" >> /usr/share/wayland-sessions/hyprland.desktop
 
   sleep 2
 
