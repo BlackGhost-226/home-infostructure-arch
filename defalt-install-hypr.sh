@@ -26,30 +26,28 @@ fi
 read -n1 -rep 'Would you like to install the packages? (y,n)' INST
 if [[ $INST == "Y" || $INST == "y" ]]; then
   # xfce4-settings?
-  yay -S --noconfirm hyprland mako python-requests \
-    xdg-desktop-portal-hyprland wlroots xdg-utils wayland xorg-xwayland hyprpolkitagent sddm # hyprland
+  yay -S --noconfirm hyprland mako xdg-desktop-portal-hyprland wlroots xdg-utils wayland xorg-xwayland hyprpolkitagent sddm # hyprland | Fnott
 
-  yay -S --noconfirm brightnessctl gvfs bluez bluez-utils firewalld python polkit polkit-qt5 chrony # necessary utils | themes polkit-gnome
+  yay -S --noconfirm brightnessctl gvfs bluez bluez-utils firewalld polkit polkit-qt5 chrony hyprshutdown hyprland-qt-support # necessary utils
 
   yay -S --noconfirm grim slurp # screenshot utils
 
-  yay -S --noconfirm hyprpaper swaylock-effects wlogout starship waybar pyenv neofetch cava mpv wine # additional utils
+  yay -S --noconfirm hyprpaper hyprlock wlogout starship waybar neofetch cava wine hyprsysteminfo hyprpwcenter hyprqt6engine hyprlauncher # additional utils
 
-  yay -S --noconfirm wofi kitty dolphin ranger nm-connection-editor blueman # necessary apps
+  yay -S --noconfirm wofi kitty thunar ffmpegthumbnailer tumbler nm-connection-editor blueman # necessary apps
 
-  yay -S --noconfirm vlc telegram-desktop kclock vlc-plugins-all visual-studio-code-bin firefox copyq pyenv # additional apps
+  yay -S --noconfirm vlc telegram-desktop kclock vlc-plugins-all visual-studio-code-bin librewolf copyq # additional apps
+
+  yay -S --noconfirm python pyenv
 
   yay -S --noconfirm exfatprogs dosfstools ntfs-3g # disk formats support
 
   yay -S --noconfirm syncthing # buckup server
 
-  yay -S --noconfirm mesa vulkan-radeon vulkan-intel # gpu drivers
-  read -n1 -rep 'Would you like to install nvidia drivers? (y,n)' GPU
-  if [[ $GPU == "Y" || $GPU == "y" ]]; then
-    yay -S --noconfirm nvidia # nvidia-dkms
-  fi
+  yay -S --noconfirm mesa vulkan-radeon vulkan-intel nvidia # gpu drivers
 
   yay -S --noconfirm ttf-jetbrains-mono-nerd noto-fonts-emoji # fonts
+
 
   echo -e "Starting Services...\n"
   # Start the bluetooth service
@@ -59,12 +57,13 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
   sudo systemctl enable --now firewalld.service
   sudo firewall-cmd --zone=public --remove-service=ssh
 
+  # disable SSH service
   sudo systemctl disable --now sshd.service
-
-  sudo systemctl enable sddm.service
 
   sudo systemctl enable --now chronyd
 
+  # SDDM setup
+  sudo systemctl enable sddm.service # enable SDDM
   echo "" > /usr/share/wayland-sessions/hyprland.desktop
   
   echo "[Desktop Entry]" > /usr/share/wayland-sessions/hyprland.desktop
