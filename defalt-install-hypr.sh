@@ -44,7 +44,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
 
   yay -S --noconfirm syncthing # buckup server
 
-  yay -S --noconfirm mesa vulkan-radeon vulkan-intel nvidia # gpu drivers
+  yay -S --noconfirm mesa vulkan-radeon vulkan-intel nvidia-dkms nvidia-utils # gpu drivers
 
   yay -S --noconfirm ttf-jetbrains-mono-nerd noto-fonts-emoji # fonts
 
